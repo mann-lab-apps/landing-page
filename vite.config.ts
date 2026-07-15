@@ -1,7 +1,7 @@
 import { defineConfig } from "vitest/config";
 
 export default defineConfig({
-  base: "/landing-page/",
+  base: "/",
   test: {
     environment: "happy-dom"
   }
