@@ -6,12 +6,15 @@ import {
   publishedApps,
   workmapPoints
 } from "./features/landing_page/content";
+import { initGoogleAnalytics } from "./features/analytics/googleAnalytics";
 
 const app = document.querySelector<HTMLDivElement>("#app");
 
 if (!app) {
   throw new Error("App root not found");
 }
+
+initGoogleAnalytics();
 
 const renderList = <T>(
   items: T[],

@@ -12,6 +12,15 @@ npm run build
 npm run test
 ```
 
+## Analytics
+
+GA4 측정 ID를 `VITE_GA_MEASUREMENT_ID` 환경변수로 설정하면 Google Analytics가 활성화됩니다.
+로컬에서는 `.env.example`을 참고해 `.env.local`을 만들면 됩니다.
+
+```bash
+VITE_GA_MEASUREMENT_ID=G-XXXXXXXXXX npm run build
+```
+
 ## Structure
 
 - `src/main.ts`: 페이지 렌더링 진입점
