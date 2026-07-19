@@ -3,10 +3,12 @@ const GOOGLE_ANALYTICS_SCRIPT_ID = "google-analytics-script";
 declare global {
   interface Window {
     dataLayer?: unknown[];
-    gtag?: (...args: unknown[]) => void;
+    gtag?: GtagFunction;
     mannlabGoogleAnalyticsId?: string;
   }
 }
+
+type GtagFunction = (...args: unknown[]) => void;
 
 const getMeasurementId = () =>
   import.meta.env.VITE_GA_MEASUREMENT_ID?.trim() ?? "";
@@ -27,9 +29,9 @@ export const initGoogleAnalytics = (measurementId = getMeasurementId()) => {
   window.dataLayer = window.dataLayer ?? [];
   window.gtag =
     window.gtag ??
-    ((...args: unknown[]) => {
-      window.dataLayer?.push(args);
-    });
+    function gtag() {
+      window.dataLayer?.push(arguments);
+    };
 
   if (!document.getElementById(GOOGLE_ANALYTICS_SCRIPT_ID)) {
     const script = document.createElement("script");

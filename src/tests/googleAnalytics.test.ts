@@ -34,7 +34,13 @@ describe("google analytics", () => {
       "https://www.googletagmanager.com/gtag/js?id=G-MANNLAB123"
     );
     expect(window.dataLayer).toHaveLength(2);
-    expect(window.dataLayer?.[0]).toEqual(["js", expect.any(Date)]);
-    expect(window.dataLayer?.[1]).toEqual(["config", "G-MANNLAB123"]);
+    expect(Array.from(window.dataLayer?.[0] as IArguments)).toEqual([
+      "js",
+      expect.any(Date)
+    ]);
+    expect(Array.from(window.dataLayer?.[1] as IArguments)).toEqual([
+      "config",
+      "G-MANNLAB123"
+    ]);
   });
 });
