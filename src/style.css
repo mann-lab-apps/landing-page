@@ -437,6 +437,133 @@ a {
   width: min(690px, 100%);
 }
 
+.game-share-page {
+  min-height: 100vh;
+  background: #f7f4ee;
+  color: #17211f;
+}
+
+.game-share-hero {
+  position: relative;
+  min-height: 72vh;
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  overflow: hidden;
+  padding: 88px clamp(22px, 6vw, 82px) 70px;
+  border-bottom: 2px solid #20342f;
+  background: #fffdf7;
+}
+
+.share-brand {
+  position: absolute;
+  top: 24px;
+  left: clamp(22px, 6vw, 82px);
+  font-weight: 900;
+}
+
+.target-strip {
+  display: flex;
+  gap: clamp(8px, 2vw, 14px);
+  margin-bottom: 34px;
+}
+
+.target-strip span {
+  display: grid;
+  width: clamp(54px, 11vw, 96px);
+  aspect-ratio: 1;
+  place-items: center;
+  border: 2px solid #20342f;
+  border-radius: 8px;
+  background: #fffaf0;
+  box-shadow: 5px 5px 0 #20342f;
+  font-size: clamp(2.2rem, 7vw, 4.4rem);
+  font-weight: 900;
+}
+
+.game-share-hero h1 {
+  margin: 0;
+  font-size: clamp(5rem, 22vw, 14rem);
+  line-height: 0.82;
+  letter-spacing: 0;
+}
+
+.game-share-hero p:not(.eyebrow) {
+  width: min(720px, 100%);
+  margin: 26px 0 0;
+  color: #52615c;
+  font-size: clamp(1.1rem, 2.2vw, 1.45rem);
+  line-height: 1.65;
+}
+
+.share-actions {
+  margin-top: 34px;
+}
+
+.share-info-grid,
+.share-steps {
+  width: min(1040px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.share-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  padding: 44px 0 0;
+}
+
+.share-info-grid article {
+  min-height: 116px;
+  padding: 24px;
+  border: 1px solid #dfd6c8;
+  background: #fffaf0;
+}
+
+.share-info-grid span {
+  display: block;
+  color: #d96f53;
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.share-info-grid strong {
+  display: block;
+  margin-top: 22px;
+  font-size: clamp(1.18rem, 2.3vw, 1.6rem);
+}
+
+.share-steps {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(280px, 1.2fr);
+  gap: clamp(28px, 6vw, 72px);
+  padding: clamp(58px, 9vw, 104px) 0;
+  border-bottom: 1px solid #dfd6c8;
+}
+
+.share-steps h2 {
+  margin: 0;
+  font-size: clamp(2.1rem, 5vw, 4.2rem);
+  line-height: 1.04;
+}
+
+.share-steps ol,
+.share-steps p {
+  margin: 0;
+  color: #52615c;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.share-steps li + li {
+  margin-top: 12px;
+}
+
+.tester-panel {
+  border-bottom: 0;
+}
+
 @media (max-width: 760px) {
   .site-header {
     align-items: flex-start;
@@ -462,14 +589,16 @@ a {
 
   .intro-grid,
   .workmap-layout,
-  .contact {
+  .contact,
+  .share-steps {
     grid-template-columns: 1fr;
   }
 
   .metrics,
   .offering-grid,
   .app-grid,
-  .game-grid {
+  .game-grid,
+  .share-info-grid {
     grid-template-columns: 1fr;
   }
 

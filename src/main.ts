@@ -135,8 +135,8 @@ app.innerHTML = `
               <h3>${item.title}</h3>
               <p>${item.summary}</p>
               <div class="game-actions">
-                <a class="primary-action" href="${item.downloadHref}" download>APK 다운로드</a>
-                <a class="secondary-action dark-line" href="${item.testerHref}">테스터 참여</a>
+                <a class="primary-action" href="${item.pageHref}">공유 페이지 열기</a>
+                <a class="secondary-action dark-line" href="${item.testerHref}">테스터 구독</a>
               </div>
             </article>
           `

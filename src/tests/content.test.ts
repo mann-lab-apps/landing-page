@@ -38,6 +38,7 @@ describe("landing page content", () => {
           item.platform &&
           item.version &&
           item.downloadHref &&
+          item.pageHref &&
           item.testerHref
       )
     ).toBe(true);

@@ -24,6 +24,7 @@ export type GameRelease = {
   platform: string;
   version: string;
   downloadHref: string;
+  pageHref: string;
   testerHref: string;
 };
 
@@ -92,6 +93,7 @@ export const games: GameRelease[] = [
     platform: "Android",
     version: "0.1.0",
     downloadHref: "/downloads/10000.apk",
+    pageHref: "/games/10000/",
     testerHref: "mailto:hello@mannlab.kr?subject=10000%20Android%20tester"
   }
 ];
