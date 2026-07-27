@@ -1,6 +1,7 @@
 import "./style.css";
 import {
   company,
+  games,
   highlights,
   offerings,
   publishedApps,
@@ -31,6 +32,7 @@ app.innerHTML = `
     <nav class="nav-links" aria-label="페이지 섹션">
       <a href="#studio">Studio</a>
       <a href="#apps">Apps</a>
+      <a href="#games">Games</a>
       <a href="#workmap">Workmap</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -109,6 +111,33 @@ app.innerHTML = `
               <h3>${item.title}</h3>
               <p>${item.summary}</p>
               <a class="inline-action" href="${item.href}">${item.linkLabel}</a>
+            </article>
+          `
+        )}
+      </div>
+    </section>
+
+    <section class="games-band" id="games" aria-labelledby="games-title">
+      <div class="section-inner">
+        <div class="section-heading compact">
+          <p class="eyebrow">Mann Lab Games</p>
+          <h2 id="games-title">짧게 시작하고, 바로 다시 하는 작은 게임들</h2>
+        </div>
+        ${renderList(
+          games,
+          "game-grid",
+          (item) => `
+            <article class="game-card">
+              <div class="game-meta">
+                <span>${item.status}</span>
+                <span>${item.platform} · v${item.version}</span>
+              </div>
+              <h3>${item.title}</h3>
+              <p>${item.summary}</p>
+              <div class="game-actions">
+                <a class="primary-action" href="${item.downloadHref}" download>APK 다운로드</a>
+                <a class="secondary-action dark-line" href="${item.testerHref}">테스터 참여</a>
+              </div>
             </article>
           `
         )}

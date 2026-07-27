@@ -175,6 +175,11 @@ a {
   color: #fffaf0;
 }
 
+.secondary-action.dark-line {
+  border-color: #20342f;
+  color: #20342f;
+}
+
 .inline-action {
   min-height: 42px;
   margin-top: 10px;
@@ -334,6 +339,68 @@ a {
   margin-top: auto;
 }
 
+.games-band {
+  background: #f7f4ee;
+  border-top: 1px solid #dfd6c8;
+}
+
+.game-grid {
+  display: grid;
+  padding-bottom: clamp(76px, 10vw, 132px);
+}
+
+.game-card {
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: clamp(24px, 4vw, 38px);
+  border: 2px solid #20342f;
+  border-radius: 8px;
+  background: #fffdf7;
+  box-shadow: 8px 8px 0 #20342f;
+}
+
+.game-meta,
+.game-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.game-meta {
+  width: 100%;
+  justify-content: space-between;
+  color: #52615c;
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.game-meta span:first-child {
+  color: #d96f53;
+}
+
+.game-card h3 {
+  margin: 42px 0 18px;
+  color: #17211f;
+  font-size: clamp(4rem, 15vw, 9rem);
+  line-height: 0.9;
+}
+
+.game-card p {
+  width: min(680px, 100%);
+  margin: 0;
+  color: #52615c;
+  font-size: clamp(1.08rem, 2vw, 1.28rem);
+  line-height: 1.7;
+}
+
+.game-actions {
+  margin-top: auto;
+  padding-top: 34px;
+}
+
 .workmap-band {
   background: #dfe8df;
 }
@@ -376,6 +443,8 @@ a {
   }
 
   .nav-links {
+    justify-content: flex-end;
+    flex-wrap: wrap;
     gap: 12px;
     font-size: 0.82rem;
   }
@@ -399,11 +468,16 @@ a {
 
   .metrics,
   .offering-grid,
-  .app-grid {
+  .app-grid,
+  .game-grid {
     grid-template-columns: 1fr;
   }
 
   .offering-card {
     min-height: 210px;
+  }
+
+  .game-card {
+    box-shadow: 5px 5px 0 #20342f;
   }
 }

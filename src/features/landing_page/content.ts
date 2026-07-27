@@ -17,6 +17,16 @@ export type PublishedApp = {
   linkLabel: string;
 };
 
+export type GameRelease = {
+  title: string;
+  status: string;
+  summary: string;
+  platform: string;
+  version: string;
+  downloadHref: string;
+  testerHref: string;
+};
+
 export type WorkmapPoint = {
   title: string;
   body: string;
@@ -70,6 +80,19 @@ export const publishedApps: PublishedApp[] = [
     partner: "가족과 작은 사업장",
     href: "#contact",
     linkLabel: "명순 함께 보기"
+  }
+];
+
+export const games: GameRelease[] = [
+  {
+    title: "10000",
+    status: "Android test build",
+    summary:
+      "10 x 10 숫자판에서 1 0 0 0 0을 빠르게 찾는 60초 스케치 스타일 미니게임입니다.",
+    platform: "Android",
+    version: "0.1.0",
+    downloadHref: "/downloads/10000.apk",
+    testerHref: "mailto:hello@mannlab.kr?subject=10000%20Android%20tester"
   }
 ];
 

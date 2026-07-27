@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   company,
+  games,
   highlights,
   offerings,
   publishedApps,
@@ -26,6 +27,18 @@ describe("landing page content", () => {
       publishedApps.every(
         (item) =>
           item.status && item.summary && item.partner && item.href && item.linkLabel
+      )
+    ).toBe(true);
+    expect(games.map((item) => item.title)).toEqual(["10000"]);
+    expect(
+      games.every(
+        (item) =>
+          item.status &&
+          item.summary &&
+          item.platform &&
+          item.version &&
+          item.downloadHref &&
+          item.testerHref
       )
     ).toBe(true);
   });
