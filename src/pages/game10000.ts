@@ -1,5 +1,5 @@
 import "../style.css";
-import { games } from "../features/landing_page/content";
+import { games, testerProgram } from "../features/landing_page/content";
 import { initGoogleAnalytics } from "../features/analytics/googleAnalytics";
 
 const app = document.querySelector<HTMLDivElement>("#app");
@@ -27,7 +27,6 @@ app.innerHTML = `
       <p>${game.summary}</p>
       <div class="game-actions share-actions">
         <a class="primary-action" href="${game.downloadHref}" download>APK 다운로드</a>
-        <a class="secondary-action dark-line" href="${game.testerHref}">테스터 구독</a>
       </div>
     </section>
 
@@ -64,10 +63,21 @@ app.innerHTML = `
         <h2 id="tester-title">테스터 구독</h2>
       </div>
       <p>
+        ${testerProgram.description}
         Google Play closed testing이 열리면 구독자에게 참여 링크를 보냅니다.
         Play 테스트는 Google 계정 이메일이 필요하며, 프로덕션 출시 전 12명 이상이
         14일 동안 opt-in 상태를 유지해야 합니다.
       </p>
     </section>
   </main>
+
+  <a
+    class="tester-fab"
+    href="${testerProgram.href}"
+    aria-label="${testerProgram.description}"
+    title="${testerProgram.description}"
+  >
+    <span>${testerProgram.label}</span>
+    <strong>${testerProgram.shortLabel}</strong>
+  </a>
 `;

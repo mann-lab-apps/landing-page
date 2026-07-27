@@ -5,6 +5,7 @@ import {
   highlights,
   offerings,
   publishedApps,
+  testerProgram,
   workmapPoints
 } from "./features/landing_page/content";
 import { initGoogleAnalytics } from "./features/analytics/googleAnalytics";
@@ -136,7 +137,6 @@ app.innerHTML = `
               <p>${item.summary}</p>
               <div class="game-actions">
                 <a class="primary-action" href="${item.pageHref}">공유 페이지 열기</a>
-                <a class="secondary-action dark-line" href="${item.testerHref}">테스터 구독</a>
               </div>
             </article>
           `
@@ -179,4 +179,14 @@ app.innerHTML = `
       </a>
     </section>
   </main>
+
+  <a
+    class="tester-fab"
+    href="${testerProgram.href}"
+    aria-label="${testerProgram.description}"
+    title="${testerProgram.description}"
+  >
+    <span>${testerProgram.label}</span>
+    <strong>${testerProgram.shortLabel}</strong>
+  </a>
 `;

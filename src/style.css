@@ -564,6 +564,36 @@ a {
   border-bottom: 0;
 }
 
+.tester-fab {
+  position: fixed;
+  right: clamp(16px, 3vw, 28px);
+  bottom: clamp(16px, 3vw, 28px);
+  z-index: 20;
+  display: grid;
+  min-width: min(310px, calc(100vw - 32px));
+  gap: 3px;
+  padding: 14px 18px;
+  border: 2px solid #20342f;
+  border-radius: 8px;
+  background: #e8775b;
+  color: #151a18;
+  box-shadow: 5px 5px 0 #20342f;
+  font-weight: 900;
+}
+
+.tester-fab span {
+  font-size: 0.78rem;
+}
+
+.tester-fab strong {
+  font-size: 1.08rem;
+}
+
+.tester-fab:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 6px 6px 0 #20342f;
+}
+
 @media (max-width: 760px) {
   .site-header {
     align-items: flex-start;
@@ -608,5 +638,12 @@ a {
 
   .game-card {
     box-shadow: 5px 5px 0 #20342f;
+  }
+
+  .tester-fab {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    min-width: 0;
   }
 }

@@ -25,7 +25,13 @@ export type GameRelease = {
   version: string;
   downloadHref: string;
   pageHref: string;
-  testerHref: string;
+};
+
+export type TesterProgram = {
+  href: string;
+  label: string;
+  shortLabel: string;
+  description: string;
 };
 
 export type WorkmapPoint = {
@@ -40,6 +46,14 @@ export const company = {
   intro:
     "만랩은 혼자 만 가지 문제를 해결하려는 회사가 아닙니다. 엄마의 일, 동생의 일, 작은 팀과 회사의 중요한 문제를 같이 듣고 정리한 뒤 개발로 해결 가능한 형태까지 함께 만들어 갑니다.",
   contactEmail: "hello@mannlab.kr"
+};
+
+export const testerProgram: TesterProgram = {
+  href: "mailto:hello@mannlab.kr?subject=Mann%20Lab%20Games%20tester",
+  label: "우리의 테스터가 되어주세요",
+  shortLabel: "테스터 되기",
+  description:
+    "Mann Lab Games의 새 Android 빌드와 Google Play 테스트 소식을 먼저 받아볼 수 있습니다."
 };
 
 export const highlights: Highlight[] = [
@@ -93,8 +107,7 @@ export const games: GameRelease[] = [
     platform: "Android",
     version: "0.1.0",
     downloadHref: "/downloads/10000.apk",
-    pageHref: "/games/10000/",
-    testerHref: "mailto:hello@mannlab.kr?subject=10000%20Android%20tester"
+    pageHref: "/games/10000/"
   }
 ];
 

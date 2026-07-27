@@ -5,6 +5,7 @@ import {
   highlights,
   offerings,
   publishedApps,
+  testerProgram,
   workmapPoints
 } from "../features/landing_page/content";
 
@@ -38,9 +39,11 @@ describe("landing page content", () => {
           item.platform &&
           item.version &&
           item.downloadHref &&
-          item.pageHref &&
-          item.testerHref
+          item.pageHref
       )
     ).toBe(true);
+    expect(testerProgram.label).toContain("테스터");
+    expect(testerProgram.description).toContain("Mann Lab Games");
+    expect(testerProgram.href).toContain("mailto:");
   });
 });
