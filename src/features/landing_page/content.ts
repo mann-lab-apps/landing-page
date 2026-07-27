@@ -49,7 +49,7 @@ export const company = {
 };
 
 export const testerProgram: TesterProgram = {
-  href: "mailto:hello@mannlab.kr?subject=Mann%20Lab%20Games%20tester",
+  href: "mailto:daga4242@gmail.com?subject=Mann%20Lab%20Games%20tester",
   label: "우리의 테스터가 되어주세요",
   shortLabel: "테스터 되기",
   description:
