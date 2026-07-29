@@ -136,7 +136,7 @@ app.innerHTML = `
               <h3>${item.title}</h3>
               <p>${item.summary}</p>
               <div class="game-actions">
-                <a class="primary-action" href="${item.pageHref}">공유 페이지 열기</a>
+                <a class="primary-action" href="${item.pageHref}">게임 열기</a>
               </div>
             </article>
           `

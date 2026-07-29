@@ -38,10 +38,10 @@ describe("landing page content", () => {
           item.summary &&
           item.platform &&
           item.version &&
-          item.downloadHref &&
           item.pageHref
       )
     ).toBe(true);
+    expect(games[0].pageHref).toBe("https://games.mannlab.app/");
     expect(testerProgram.label).toContain("테스터");
     expect(testerProgram.description).toContain("Mann Lab Games");
     expect(testerProgram.href).toContain("mailto:");

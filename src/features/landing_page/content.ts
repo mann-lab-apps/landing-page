@@ -23,7 +23,6 @@ export type GameRelease = {
   summary: string;
   platform: string;
   version: string;
-  downloadHref: string;
   pageHref: string;
 };
 
@@ -101,13 +100,12 @@ export const publishedApps: PublishedApp[] = [
 export const games: GameRelease[] = [
   {
     title: "10000",
-    status: "Android test build",
+    status: "WebGL test build",
     summary:
       "10 x 10 숫자판에서 1 0 0 0 0을 빠르게 찾는 60초 스케치 스타일 미니게임입니다.",
-    platform: "Android",
+    platform: "Web",
     version: "0.1.0",
-    downloadHref: "/downloads/10000.apk",
-    pageHref: "/games/10000/"
+    pageHref: "https://games.mannlab.app/"
   }
 ];
 
